@@ -26,12 +26,13 @@
     - .gitignore - Сгенерированный dotnet
     - Program.cs - Код к задаче
 - Readme.md - Описание
-- Diagram.drawio.png - блок-схема
+- 1234.drawio.png - блок-схема
+  
 
 ## Использование для проверки
 
 1. https://github.com/wiktor12sp/FinalTest
-2. см. [Diagram.drawio.png](Diagram.drawio.png) 
+2. см. [1234.drawio.png](1234.drawio.png) 
 3. Данный текст находится в Readme.md
 4. Скомпилировать C# код из файла [Program.cs](Programm/Program.cs)  
 Для проверки изменить инициализацию массива startingArray (строка 1)
