@@ -1,49 +1,57 @@
-﻿строка [] inputArray  = { " привет " , " 2 " , " мир " , " :-) " , " 1234 " , " 1567 " };
+string[] inputArray = { "hello", "2", "world", ":-)", "1234", "1567" };
 
-// Метод печати массива
-строка  PrintArray ( строка [] inputArray )
+// Method for Printing an Array
+string PrintArray(string[] inputArray)
 {
-    возвращаемая  строка . Присоединиться ( " , " , inputArray );
+    return string.Join(", ", inputArray);
 }
 
-// Метод подсчета строк в массиве длиной меньше или равной 3 символам
-int  CountStringInArray ( строка [] ввод )
+// Method for counting strings in an array less than or equal to 3 characters long
+int CountStringInArray(string[] input)
 {
-    int  len  ​​=  inputArray . длина ;
-     число  счетчиков =  0 ;
-    интервал  maxLengthString  =  3 ;
-    для ( int  i  =  0 ; я  <  len ; я ++ )
+    int len = inputArray.Length;
+    int count = 0;
+    int maxLengthString = 3;
+    for (int i = 0; i < len; i++)
     {
-        если ( inputArray [ i ]. Length  <=  maxLengthString )
+        if (inputArray[i].Length <= maxLengthString)
         {
-            считать ++ ;
+            count++;
         }
     }
-     количество возвратов ;
+    return count;
 }
 
-// Метод для создания нового массива из строк, меньших или равных 3 символам, которые он находит во входном массиве
-// ! передать результат метода CountStringInArray в аргумент countWords!
-строка [] CreateNewArray ( строка [] inputArray , int  countWords )
+// Method for creating a new array from strings less than or equal to 3 characters that it finds in the input array
+// ! pass the result of the CountStringInArray method to the countWords argument !
+string[] CreateNewArray(string[] inputArray, int countWords)
 {
-    int  len  ​​=  inputArray . длина ;
-    строка [] outputArray  =  новая  строка [ countWords ];
-     число  счетчиков =  0 ;
-    интервал  maxLengthString  =  3 ;
-    для ( int  i  =  0 ; я  <  len ; я ++ )
+    int len = inputArray.Length;
+    string[] outputArray = new string[countWords];
+    int count = 0;
+    int maxLengthString = 3;
+    for (int i = 0; i < len; i++)
     {
-        если ( inputArray [ i ]. Length  <=  maxLengthString )
+        if (inputArray[i].Length <= maxLengthString)
         {
-            outputArray [ count ] =  inputArray [ i ];
-            считать ++ ;
+            outputArray[count] = inputArray[i];
+            count++;
         }
     }
 
-    вернуть  выходной массив ;
+    return outputArray;
 }
 
-Массив печати ( входной массив );
+PrintArray(inputArray);
 
-string [] outputArray  =  CreateNewArray ( inputArray , CountStringInArray ( inputArray ));
+string[] outputArray = CreateNewArray(inputArray, CountStringInArray(inputArray));
 
-Массив печати ( выходной массив );
+PrintArray(outputArray);
+
+
+
+
+          
+   
+
+
